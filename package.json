@@ -1,0 +1,27 @@
+{
+  "name": "jquery-hyperscript",
+  "version": "1.0.0",
+  "description": "jQuery plugin to create HTML (DOM elements) using a DSL known as hyperscript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiermic/jquery-hyperscript.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "html",
+    "dsl",
+    "hyperscript",
+    "dom"
+  ],
+  "author": "Michael Maier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiermic/jquery-hyperscript/issues"
+  },
+  "homepage": "https://github.com/maiermic/jquery-hyperscript#readme"
+}
