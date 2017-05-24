@@ -4,7 +4,7 @@
   "description": "jQuery plugin to create HTML (DOM elements) using a DSL known as hyperscript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf-ci.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/maiermic/jquery-hyperscript/issues"
   },
-  "homepage": "https://github.com/maiermic/jquery-hyperscript#readme"
+  "homepage": "https://github.com/maiermic/jquery-hyperscript#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.5.2",
+    "karma": "~1.4.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-sauce-launcher": "~1.1.0"
+  }
 }
