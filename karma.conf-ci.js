@@ -1,4 +1,6 @@
 module.exports = function(config) {
+  const isContinuousIntegration = process.env.CONTINUOUS_INTEGRATION === 'true'
+  console.log('isContinuousIntegration', isContinuousIntegration)
 
   // Browsers to run on Sauce Labs
   var customLaunchers = {
@@ -66,6 +68,7 @@ module.exports = function(config) {
       username: process.env.SAUCEUSER,
       accessKey: process.env.ACCESSSAUCE,
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: !isContinuousIntegration,
     },
     captureTimeout: 120000,
     customLaunchers: customLaunchers,
