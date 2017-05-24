@@ -25,6 +25,6 @@ describe('updateAppState', function() {
 describe('jQuery', function() {
     it('should be defined', function() {
         expect($).toBeDefined();
-        // expect(jQuery).toBeDefined();
+        expect(window.isJQueryDefined()).toBe(true);
     });
 });

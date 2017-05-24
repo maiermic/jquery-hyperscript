@@ -9,4 +9,7 @@
     window.updateAppState = function(state) {
         window.history.pushState(state || {}, document.title, 'newstate');
     };
+    window.isJQueryDefined = function() {
+      return !!$;
+    };
 })();
