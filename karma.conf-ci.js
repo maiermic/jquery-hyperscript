@@ -62,7 +62,10 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
 
     sauceLabs: {
-      testName: 'Karma and Sauce Labs demo'
+      testName: 'Karma and Sauce Labs demo',
+      username: process.env.SAUCEUSER,
+      accessKey: process.env.ACCESSSAUCE,
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
     },
     captureTimeout: 120000,
     customLaunchers: customLaunchers,
