@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/maiermic/jquery-hyperscript#readme",
   "devDependencies": {
-    "jasmine-core": "^2.5.2",
-    "karma": "~1.4.0",
-    "karma-jasmine": "~1.1.0",
-    "karma-sauce-launcher": "~1.1.0"
+    "jasmine-core": "^2.6.2",
+    "karma": "^1.7.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-sauce-launcher": "^1.1.0"
   }
 }
