@@ -8,7 +8,7 @@ module.exports = function(config) {
       'jasmine'
     ],
     files: [
-      'src/*.js',
+      'bundle.js',
       'test/*.js'
     ],
     reporters: [

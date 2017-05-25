@@ -4,6 +4,7 @@
   "description": "jQuery plugin to create HTML (DOM elements) using a DSL known as hyperscript.",
   "main": "index.js",
   "scripts": {
+    "build": "browserify src/main.js -o bundle.js",
     "test": "karma start .karma/sauce.karma.conf.js",
     "test-local": "karma start .karma/local.karma.conf.js"
   },
@@ -25,7 +26,17 @@
     "url": "https://github.com/maiermic/jquery-hyperscript/issues"
   },
   "homepage": "https://github.com/maiermic/jquery-hyperscript#readme",
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "devDependencies": {
+    "browserify": "^14.3.0",
+    "browserify-shim": "^3.8.14",
     "jasmine-core": "^2.6.2",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
