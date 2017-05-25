@@ -1,5 +1,5 @@
 const $ = require('jquery');
 
-$.fn.jqueryPlugin = function () {
+$.fn.hyperscript = function jqueryHyperscript(selector) {
   return true;
 };

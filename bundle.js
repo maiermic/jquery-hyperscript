@@ -2,7 +2,7 @@
 (function (global){
 const $ = (typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null);
 
-$.fn.jqueryPlugin = function () {
+$.fn.hyperscript = function jqueryHyperscript(selector) {
   return true;
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})

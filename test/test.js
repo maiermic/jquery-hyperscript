@@ -7,6 +7,6 @@ describe('jQuery', function() {
 
 describe('plugin', function() {
     it('should be defined in global namespace', function() {
-        expect($.fn.jqueryPlugin).toBeDefined();
+        expect($.fn.hyperscript).toBeDefined();
     });
 });
