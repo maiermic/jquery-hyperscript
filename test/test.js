@@ -37,4 +37,14 @@ describe('hyperscript', function() {
         expect($node).toEqual(jasmine.any($))
         expect($node.is('div.column.container')).toBe(true)
     });
+    it('should create div Node for id without tag', function() {
+        var $node = $.fn.hyperscript('#app')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('div#app')).toBe(true)
+    });
+    it('should create Node for tag with id', function() {
+        var $node = $.fn.hyperscript('h1#title')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('h1#title')).toBe(true)
+    });
 });
