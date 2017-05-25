@@ -4,8 +4,8 @@
   "description": "jQuery plugin to create HTML (DOM elements) using a DSL known as hyperscript.",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf-ci.js",
-    "test-local": "karma start karma.conf.js"
+    "test": "karma start .karma/karma.conf-ci.js",
+    "test-local": "karma start .karma/karma.conf.js"
   },
   "repository": {
     "type": "git",

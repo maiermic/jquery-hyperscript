@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = function(config) {
   const isContinuousIntegration = process.env.CONTINUOUS_INTEGRATION === 'true'
   console.log('isContinuousIntegration', isContinuousIntegration)
@@ -33,7 +35,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: path.resolve(__dirname, '..'),
 
 
     // frameworks to use
