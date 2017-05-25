@@ -18,7 +18,6 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     captureTimeout: 120000,
-    browsers: ['Chrome'],
     singleRun: true
   };
 };
