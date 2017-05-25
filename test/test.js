@@ -15,6 +15,6 @@ describe('hyperscript', function() {
     it('should create Node for tag name', function() {
         var $node = $.fn.hyperscript('h1')
         expect($node).toEqual(jasmine.any($))
-        expect($node.is('h1'))
+        expect($node.is('h1')).toBe(true)
     });
 });
