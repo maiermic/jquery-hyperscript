@@ -9,7 +9,11 @@ const parseSelector = require('mich-parse-selector')
 
 $.fn.hyperscript = function jqueryHyperscript(selector) {
   const hast = parseSelector(selector)
-  return $(document.createElement(hast.tagName));
+  const $node = $(document.createElement(hast.tagName))
+  if (hast.properties.className) {
+    $node.addClass(hast.properties.className.join(' '))
+  }
+  return $node
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"mich-parse-selector":1}]},{},[2]);

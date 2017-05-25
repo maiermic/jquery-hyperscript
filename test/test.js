@@ -17,4 +17,14 @@ describe('hyperscript', function() {
         expect($node).toEqual(jasmine.any($))
         expect($node.is('h1')).toBe(true)
     });
+    it('should create Node for tag with class', function() {
+        var $node = $.fn.hyperscript('h2.chapter')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('h2.chapter')).toBe(true)
+    });
+    it('should create Node for tag with classes', function() {
+        var $node = $.fn.hyperscript('h2.header.chapter')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('h2.header.chapter')).toBe(true)
+    });
 });
