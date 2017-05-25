@@ -6,6 +6,7 @@
   "scripts": {
     "build": "browserify src/main.js -o bundle.js",
     "test": "karma start .karma/sauce.karma.conf.js",
+    "pretest-local": "npm run build",
     "test-local": "karma start .karma/local.karma.conf.js"
   },
   "repository": {
