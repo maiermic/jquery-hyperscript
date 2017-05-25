@@ -27,4 +27,14 @@ describe('hyperscript', function() {
         expect($node).toEqual(jasmine.any($))
         expect($node.is('h2.header.chapter')).toBe(true)
     });
+    it('should create div Node for class without tag', function() {
+        var $node = $.fn.hyperscript('.container')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('div.container')).toBe(true)
+    });
+    it('should create div Node for classes without tag', function() {
+        var $node = $.fn.hyperscript('.column.container')
+        expect($node).toEqual(jasmine.any($))
+        expect($node.is('div.column.container')).toBe(true)
+    });
 });
