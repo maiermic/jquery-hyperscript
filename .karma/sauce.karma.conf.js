@@ -35,6 +35,7 @@ module.exports = function(config) {
 
   var karmaConfig = defaultConfig(config);
   Object.assign(karmaConfig, {
+    browserNoActivityTimeout: 3 * 60 * 1000,
     sauceLabs: {
       testName: 'Karma and Sauce Labs demo',
       username: process.env.SAUCEUSER,
