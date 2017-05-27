@@ -2,7 +2,7 @@
   "name": "jquery-hyperscript",
   "version": "1.0.0",
   "description": "jQuery plugin to create HTML (DOM elements) using a DSL known as hyperscript.",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
     "build": "browserify src/main.js -o bundle.js",
     "test": "karma start .karma/sauce.karma.conf.js",
