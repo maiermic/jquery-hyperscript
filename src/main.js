@@ -1,14 +1,17 @@
 const $ = require('jquery');
-const parseSelector = require('mich-parse-selector')
+const hyperscript = require('hyperscript')
 
-$.fn.hyperscript = function jqueryHyperscript(selector) {
-  const hast = parseSelector(selector)
-  const $node = $(document.createElement(hast.tagName))
-  if (hast.properties.id) {
-    $node.attr('id', hast.properties.id)
+function unpack(arg) {
+  if (arg instanceof jQuery) {
+    return unpack(arg.get())
+  } else if (Array.isArray(arg)) {
+    return arg.map(unpack)
+  } else {
+    return arg
   }
-  if (hast.properties.className) {
-    $node.addClass(hast.properties.className.join(' '))
-  }
-  return $node
+}
+
+$.fn.hyperscript = function jqueryHyperscript() {
+  var args = Array.prototype.slice.call(arguments)
+  return $(hyperscript.apply(undefined, args.map(unpack)))
 };
